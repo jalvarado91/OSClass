@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define M 500
-#define N 500
+#define M 5000
+#define N 5000
 
 int num_threads;
 
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
     // Input Validation
 	if (argc <= 1)
@@ -17,7 +17,7 @@ int main(int argc, char *argv)
 	}
 
 	num_threads = atoi(argv[1]);
-	if (!num_students)
+	if (!num_threads)
 	{
 		printf("Arguments are not valid.\n");
 		return 0;

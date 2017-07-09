@@ -1,0 +1,114 @@
+num_students: 10, capacity: 4
+Student 0 enters the office.
+Student 0 asks a question.
+Student 1 enters the office.
+Student 2 enters the office.
+Student 3 enters the office.
+Professor starts to answer question for student 0.
+Professor is done with answer for student 0.
+Student 0 is satisfied.
+Student 0 leaves the office.
+Student 1 asks a question.
+Student 4 enters the office.
+Professor starts to answer question for student 1.
+Professor is done with answer for student 1.
+Student 1 is satisfied.
+Student 1 asks a question.
+Professor starts to answer question for student 1.
+Professor is done with answer for student 1.
+Student 1 is satisfied.
+Student 1 leaves the office.
+Student 3 asks a question.
+Professor starts to answer question for student 3.
+Professor is done with answer for student 3.
+Student 3 is satisfied.
+Student 3 asks a question.
+Professor starts to answer question for student 3.
+Professor is done with answer for student 3.
+Student 3 is satisfied.
+Student 3 asks a question.
+Professor starts to answer question for student 3.
+Professor is done with answer for student 3.
+Student 3 is satisfied.
+Student 3 asks a question.
+Professor starts to answer question for student 3.
+Professor is done with answer for student 3.
+Student 3 is satisfied.
+Student 3 leaves the office.
+Student 2 asks a question.
+Professor starts to answer question for student 2.
+Professor is done with answer for student 2.
+Student 2 is satisfied.
+Student 2 asks a question.
+Professor starts to answer question for student 2.
+Professor is done with answer for student 2.
+Student 2 is satisfied.
+Student 2 asks a question.
+Professor starts to answer question for student 2.
+Professor is done with answer for student 2.
+Student 2 is satisfied.
+Student 2 leaves the office.
+Student 4 asks a question.
+Professor starts to answer question for student 4.
+Professor is done with answer for student 4.
+Student 4 is satisfied.
+Student 4 leaves the office.
+Student 5 enters the office.
+Student 5 asks a question.
+Professor starts to answer question for student 5.
+Professor is done with answer for student 5.
+Student 5 is satisfied.
+Student 5 asks a question.
+Professor starts to answer question for student 5.
+Professor is done with answer for student 5.
+Student 5 is satisfied.
+Student 5 leaves the office.
+Student 6 enters the office.
+Student 6 asks a question.
+Professor starts to answer question for student 6.
+Professor is done with answer for student 6.
+Student 6 is satisfied.
+Student 6 asks a question.
+Professor starts to answer question for student 6.
+Professor is done with answer for student 6.
+Student 6 is satisfied.
+Student 6 asks a question.
+Professor starts to answer question for student 6.
+Professor is done with answer for student 6.
+Student 6 is satisfied.
+Student 6 leaves the office.
+Student 7 enters the office.
+Student 7 asks a question.
+Professor starts to answer question for student 7.
+Professor is done with answer for student 7.
+Student 7 is satisfied.
+Student 7 asks a question.
+Professor starts to answer question for student 7.
+Professor is done with answer for student 7.
+Student 7 is satisfied.
+Student 7 asks a question.
+Professor starts to answer question for student 7.
+Professor is done with answer for student 7.
+Student 7 is satisfied.
+Student 7 asks a question.
+Professor starts to answer question for student 7.
+Professor is done with answer for student 7.
+Student 7 is satisfied.
+Student 7 leaves the office.
+Student 8 enters the office.
+Student 8 asks a question.
+Professor starts to answer question for student 8.
+Professor is done with answer for student 8.
+Student 8 is satisfied.
+Student 8 leaves the office.
+Student 9 enters the office.
+Student 9 asks a question.
+Professor starts to answer question for student 9.
+Professor is done with answer for student 9.
+Student 9 is satisfied.
+Student 9 asks a question.
+Professor starts to answer question for student 9.
+Professor is done with answer for student 9.
+Student 9 is satisfied.
+Student 9 leaves the office.
+Simulation completed. No more students left.

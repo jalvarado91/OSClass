@@ -2,14 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define M 500
-#define N 500
+#define M 5000
+#define N 5000
 
 int num_threads;
 
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
-    // Input Validation
+	// Input Validation
 	if (argc <= 1)
 	{
 		printf("Error: Please specify a number threads.\n");
@@ -17,57 +17,57 @@ int main(int argc, char *argv)
 	}
 
 	num_threads = atoi(argv[1]);
-	if (!num_students)
+	if (!num_threads)
 	{
 		printf("Arguments are not valid.\n");
 		return 0;
 	}
-    //set number of threads here
-    omp_set_num_threads(num_threads);
+	//set number of threads here
+	omp_set_num_threads(num_threads);
 
-    int i, j, k;
-    double sum;
-    double **A, **B, **C;
+	int i, j, k;
+	double sum;
+	double **A, **B, **C;
 
-    A = malloc(M * sizeof(double *));
-    B = malloc(M * sizeof(double *));
-    C = malloc(M * sizeof(double *));
+	A = malloc(M * sizeof(double *));
+	B = malloc(M * sizeof(double *));
+	C = malloc(M * sizeof(double *));
 
-    for (i = 0; i < M; i++)
-    {
-        A[i] = malloc(N * sizeof(double));
-        B[i] = malloc(N * sizeof(double));
-        C[i] = malloc(N * sizeof(double));
-    }
+	for (i = 0; i < M; i++)
+	{
+		A[i] = malloc(N * sizeof(double));
+		B[i] = malloc(N * sizeof(double));
+		C[i] = malloc(N * sizeof(double));
+	}
 
-    double start, end;
+	double start, end;
 
-    for (i = 0; i < M; i++)
-    {
-        for (j = 0; j < N; j++)
-        {
-            A[i][j] = j * 1;
-            B[i][j] = i * j + 2;
-            C[i][j] = j - i * 2;
-        }
-    }
+	for (i = 0; i < M; i++)
+	{
+		for (j = 0; j < N; j++)
+		{
+			A[i][j] = j * 1;
+			B[i][j] = i * j + 2;
+			C[i][j] = j - i * 2;
+		}
+	}
 
-    start = omp_get_wtime();
+	start = omp_get_wtime();
 
-    for (i = 0; i < M; i++)
-    {
-        for (j = 0; j < N; j++)
-        {
-            sum = 0;
-            for (k = 0; k < M; k++)
-            {
-                sum += A[i][k] * B[k][j];
-            }
-            C[i][j] = sum;
-        }
-    }
+	for (i = 0; i < M; i++)
+	{
+		for (j = 0; j < N; j++)
+		{
+			sum = 0;
+			for (k = 0; k < M; k++)
+			{
+				sum += A[i][k] * B[k][j];
+			}
+			C[i][j] = sum;
+		}
+	}
 
-    end = omp_get_wtime();
+	end = omp_get_wtime();
 
-    printf("Time of computation: %f\n", end - start);
+	printf("Time of computation: %f\n", end - start);
 }

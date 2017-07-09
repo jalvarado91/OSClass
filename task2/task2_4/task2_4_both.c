@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define M 5000
-#define N 5000
+#define M 50
+#define N 50
 
 int num_threads;
 

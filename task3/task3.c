@@ -21,6 +21,7 @@
 int num_students;
 int office_capacity;
 int current_student_id;
+int students_left;
 
 sem_t OfficeSpots;
 sem_t StudentCanAskQuestion;
@@ -61,9 +62,10 @@ int main(int argc, char *argv[])
 	sem_init(&StudentCanSpeak, 1, 0);
 
 	int tid;
-	omp_set_num_threads(num_threads + 1); // Reserve a thread for the professor
+	students_left = num_students;
+	omp_set_num_threads(num_students + 1); // Reserve a thread for the professor
 	
-	#pragma omp parallel shared(current_student_id) private(tid)
+	#pragma omp parallel shared(current_student_id, students_left) private(tid)
 	{
 		tid = omp_get_thread_num();
 		
@@ -73,33 +75,17 @@ int main(int argc, char *argv[])
 		} 
 		// Student
 		else {
-			Student(tid - 1)
+			Student(tid - 1);
 		}
 	}
 
-	// pthread_t professor_thread;
-	// pthread_create(&professor_thread, NULL, Professor, NULL);
-
-	// int student_num;
-	// pthread_t student_threads[num_students];
-	// int student_ids[num_students];
-
-	// for (student_num = 0; student_num < num_students; student_num++) {
-	// 	student_ids[student_num] = student_num;
-	// 	pthread_create(&student_threads[student_num], NULL, Student, (void *)&student_ids[student_num]);
-	// }
-
-	// for (student_num = 0; student_num < num_students; student_num++) {
-	// 	pthread_join(student_threads[student_num], NULL);
-	// }
-
 	printf("Simulation completed. No more students left.\n");
-
 	return 0;
+
 }
 
 void Professor() {
-	while(1) {
+	while(students_left > 0) {
 		sem_post(&StudentCanSpeak);
 		sem_wait(&ProfessorCanSpeak);
 		AnswerStart(current_student_id);
@@ -112,7 +98,7 @@ void Student(int id) {
 	int student_id = id;
 	int n_questions = (student_id % 4) + 1;
 	int quest;
-
+	
 	sem_wait(&OfficeSpots); // Wait for a spot in the office
 	EnterOffice(student_id);
 
@@ -129,8 +115,13 @@ void Student(int id) {
 		sem_post(&StudentCanAskQuestion); // Let another student ask
 	}
 
+	students_left--;
 	sem_post(&OfficeSpots); // Let another student in the office
 	LeaveOffice(student_id); 	
+	if(students_left == 0) {
+		printf("Simulation completed. No more students left.\n");
+		exit(0);
+	}	
 }
 
 // Professor Actions

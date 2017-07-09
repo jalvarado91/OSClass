@@ -1,2 +1,2 @@
 default: helloworld
-	gcc –fopenmp –o helloworld helloworld.c
+	gcc -fopenmp -o helloworld helloworld.c

@@ -1,6 +1,21 @@
 #!/bin/sh
 
-#THREADS=1
+##########################################################
+## COP4610 – Principles of Operating Systems – Summer C 2017
+## Prof. Jose F. Osorio
+## Student: Juan Alvarado – 3367805
+##
+## Assignment #: 3
+## Specs: Task 2.4, OpenMP Program
+## Due Date: 06/09/2017 by 11:55pm
+##
+## Module Name: tunner
+##
+## I Certify that this program code has been written by me
+## and no part of it has been taken from any sources.
+##########################################################
+
+
 TRIALS=10
 
 threadcount=(32 16 8 4 1)

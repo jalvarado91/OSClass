@@ -3,11 +3,11 @@
 ## Prof. Jose F. Osorio
 ## Student: Juan Alvarado – 3367805
 ##
-## Assignment #: 2
-## Specs: Creating System Call
-## Due Date: 06/12/2017 by 11:55pm
+## Assignment #: 3
+## Specs: Task 1.3, Scheduling Problem
+## Due Date: 06/09/2017 by 11:55pm
 ##
-## Module Name: pinfo System Call
+## Module Name: task13
 ##
 ## I Certify that this program code has been written by me
 ## and no part of it has been taken from any sources.

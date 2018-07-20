@@ -4,14 +4,15 @@
 ## Student: Juan Alvarado – 3367805
 ##
 ## Assignment #: 3
-## Specs: Task 1.3, Scheduling Problem
+## Specs: Task 3, Scheduling Problem
 ## Due Date: 06/09/2017 by 11:55pm
 ##
-## Module Name: task13
+## Module Name: task3
 ##
 ## I Certify that this program code has been written by me
 ## and no part of it has been taken from any sources.
 ##########################################################*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
